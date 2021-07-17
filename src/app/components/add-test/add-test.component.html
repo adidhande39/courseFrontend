@@ -1,0 +1,45 @@
+<button class="close-button" mat-icon-button aria-label="close dialog" mat-dialog-close>
+  <mat-icon>close</mat-icon>
+</button>
+<div class="container mt-5">
+<form (ngSubmit)="onSubmit()" #f=ngForm>
+  <div class="row mt-2">
+    <div class="col">
+  <label for="name">Name</label>
+  <input class="form-control" id="name" type="text" [ngModel]="course.name" name="name">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+
+  <label for="description">description</label>
+  <textarea class="form-control" id="description" type="text" [ngModel]="course.description" name="description"></textarea>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+  <label for="location">location</label>
+  <input class="form-control" id="location" type="text" [ngModel]="course.location" name="location">
+    </div>
+    <div class="col">
+  <label for="prerequisite">prerequisite</label>
+  <input class="form-control" id="prerequisite" type="text" [ngModel]="course.prerequisite" name="prerequisite">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+  <label for="skills">skills</label>
+  <input class="form-control" id="skills" type="text" [ngModel]="course.skills" name="skills">
+    </div>
+  </div>
+      <div class="row mt-2">
+        <div class="col">
+  <label for="trainers">trainers</label>
+  <input class="form-control" id="trainers" type="text" [ngModel]="course.trainers" name="trainers">
+        </div>
+      </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button mat-dialog-close class="btn btn-outline-success mt-5" type="submit">Submit</button>
+  </div>
+</form>
+</div>

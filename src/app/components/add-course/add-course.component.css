@@ -1,0 +1,10 @@
+@media (min-width: 1000px) {
+  .container{
+    max-width: 670px;
+  }
+}
+.close-button{
+  float: right;
+  top:-15px;
+  right:-15px;
+}

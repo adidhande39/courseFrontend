@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*.mat-bottom-sheet-container-medium {*/
+/*  min-width: 200px;*/
+/*  max-width: calc(100vw - 128px)*/
+/*}*/
+
+/*.mat-bottom-sheet-container-large {*/
+/*  min-width: 200px;*/
+/*  max-width: calc(100vw - 256px)*/
+/*}*/
+
+/*.mat-bottom-sheet-container-xlarge {*/
+/*  min-width: 200px;*/
+/*  max-width: calc(100vw - 384px)*/
+/*}*/
+::ng-deep .mat-bottom-sheet-container{
+  min-width: 50vw!important;
+}

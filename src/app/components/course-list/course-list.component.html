@@ -1,0 +1,66 @@
+
+
+<div id="search">
+<mat-form-field appearance="outline">
+  <mat-label>Filter By</mat-label>
+  <mat-select [(ngModel)]="selectedFilter" placeholder="Select"  >
+    <mat-option *ngFor="let filter of filterList" [value]="filter">{{filter}}</mat-option>
+  </mat-select>
+</mat-form-field>
+  <div class="row">
+    <div class="col-4">
+      <div class="input-group">
+      <input class="form-control" placeholder="enter keywords" [(ngModel)]="value" type="text">
+      <button class="btn btn-outline-info mx-3" (click)="onSearch()">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button mat-raised-button (click)="openDialog2()">Open</button>
+
+
+<!--<mat-spinner *ngIf="!courses"></mat-spinner>-->
+<mat-grid-list cols="4" rowHeight="2:3">
+<div *ngFor="let course of courses">
+  <mat-grid-tile *ngIf="course">
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{course.name | titlecase}}</mat-card-title>
+      <mat-card-subtitle>{{course.location | titlecase}}</mat-card-subtitle>
+      <mat-card-subtitle>{{course.updatedAt |date:'dd/MM/YYYY' }}</mat-card-subtitle>
+      <mat-card-subtitle>{{course.createdAt |date:'dd/MM/YYYY'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+<p>{{course.description}}</p>
+      what you'll learn
+      <div *ngFor="let skill of course.skills">
+        {{skill}}
+      </div>
+      who'll teach
+      <div *ngFor="let trainer of course.trainers">
+        {{trainer}}
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="editCourse(course)">Edit</button>
+      <button mat-button (click)="openDeleteDialog(course)">Delete</button>
+      <app-file-upload [id]="course.id"></app-file-upload>
+
+    </mat-card-actions>
+  </mat-card>
+
+  </mat-grid-tile>
+</div>
+</mat-grid-list>
+<!--<button mat-raised-button (click)="openDialog()">Open</button>-->
+<button mat-raised-button (click)="openBottomSheet()"><i class="material-icons">email</i></button>
+<!--<app-add-test></app-add-test>-->
+<div *ngIf="socialAuthServive.authState | async as socialUser">
+  <p>Hello, {{socialUser.name}}!</p>
+  <br>
+  <p>Your email: {{socialUser.email}}</p>
+  <br>
+  <button mat-raised-button (click)="logout()">Logout</button>
+</div>

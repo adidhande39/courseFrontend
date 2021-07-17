@@ -1,0 +1,70 @@
+<!--<div class="row mt-5">-->
+<!--  <div class="col-md-6 m-auto">-->
+<!--    <div class="card card-body">-->
+<button class="close-button" mat-icon-button aria-label="close dialog" mat-dialog-close>
+  <mat-icon>close</mat-icon>
+</button>
+<div class="container mt-5">
+<form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+<div class="row mt-2">
+  <div class="col">
+  <label for="name">Name</label>
+  <input class="form-control" formControlName="name"  type="text" name="name" id="name" >
+  </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+      <label for="description">Description</label>
+      <textarea class="form-control" formControlName="description" name="description" id="description" cols="3" ></textarea>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+  <label for="location">Location</label>
+  <input class="form-control" formControlName="location" type="text" name="location" id="location">
+    </div>
+    <div class="col">
+  <label for="prerequisite">Prerequisite</label>
+  <input class="form-control" formControlName="prerequisite" type="text" name="prerequisite" id="prerequisite">
+    </div>
+  </div>
+
+
+<!--  <div class="mt-3" formArrayName="skills" *ngFor="let skill of skills.controls; let i=index">-->
+<!--    <div class="row">-->
+<!--      <div class="col">-->
+<!--        <div class="input-group">-->
+<!--          <span class="input-group-text mt-2">Skill</span>-->
+<!--    <input class="form-control mt-2" [formControlName]="i"  type="text" name="skill" id="skill">-->
+<!--    <button *ngIf="i>0" class="btn btn-outline-danger mt-2 mx-3" (click)="removeSkill(i)" type="button" id="removeSkill"><i class="material-icons">delete</i></button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button class="btn btn-outline-info mt-3" (click)="addSkill()" type="button" >Add More</button>-->
+
+
+<!--  <div class="mt-3" formArrayName="trainers" *ngFor="let trainer of trainers.controls; let i=index">-->
+<!--    <div class="row">-->
+<!--      <div class="col">-->
+<!--    <div class="input-group">-->
+<!--      <span class="input-group-text mt-2">Trainer</span>-->
+<!--    <input class="form-control mt-2" [formControlName]="i" type="text" name="trainer" id="trainer">-->
+<!--    <button *ngIf="i>0" class="btn btn-outline-danger mt-2 mx-3" (click)="removeTrainer(i)"><i class="material-icons">delete</i></button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button class="btn btn-outline-info mt-3" (click)="addTrainer()" type="button" >Add More</button>-->
+<!--<div class="d-grid gap-2 col-6 mx-auto">-->
+<!--  <button mat-dialog-close class="btn btn-outline-success mt-5" type="submit">Submit</button>-->
+<!--</div>-->
+
+
+</form>
+</div>
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+

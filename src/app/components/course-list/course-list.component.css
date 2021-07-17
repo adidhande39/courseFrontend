@@ -1,0 +1,20 @@
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.search{
+  display: inline-block;
+}
+/*mat-grid-tile {*/
+/*  background: lightblue;*/
+/*}*/
+
